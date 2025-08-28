@@ -51,12 +51,10 @@
       font-size: 18px;
     }
     /* SECTIONS */
-    section, footer {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    section {
       width: 100%;
+      display: block; /* biar background full lebar */
+      text-align: center;
     }
     .section-1 { background: linear-gradient(135deg, #e9f4ff, #cfe0ff); }
     .section-2 { background: linear-gradient(135deg, #cfe0ff, #9fc3ff); }
@@ -163,6 +161,7 @@
     }
     /* FOOTER */
     footer {
+      text-align: center;
       padding: 28px 20px;
       background: linear-gradient(135deg, #e9f4ff, #cfe0ff);
     }
