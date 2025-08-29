@@ -15,7 +15,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0;
     }
     a { text-decoration: none; }
     h2 {
@@ -28,6 +28,7 @@
     /* UNIVERSAL BUTTON */
     .btn, footer .links a {
       display: inline-block;
+      width: auto;
       margin: 6px;
       padding: 12px 24px;
       border-radius: 50px;
@@ -46,15 +47,18 @@
       text-align: center;
     }
     .gallery-section .btn {
+      display: inline-block;
+      width: fit-content;
       margin: 0 auto 24px;
-      padding: 16px 32px;
-      font-size: 18px;
+      padding: 16px 32px;   /* lebih besar */
+      font-size: 18px;      /* teks lebih besar */
     }
     /* SECTIONS */
-    section {
-      width: 100%;
-      display: block; /* biar background full lebar */
+    section, footer {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .section-1 { background: linear-gradient(135deg, #e9f4ff, #cfe0ff); }
     .section-2 { background: linear-gradient(135deg, #cfe0ff, #9fc3ff); }
@@ -120,6 +124,7 @@
     /* ABOUT */
     #about {
       padding: 40px 20px;
+      background: linear-gradient(135deg, #e0f0ff, #b3d8ff);
     }
     #about p {
       font-size: 18px;
@@ -135,6 +140,8 @@
       flex-direction: column;
       align-items: center;
       gap: 15px;
+      margin-top: 10px;
+      width: 100%;
       max-width: 900px;
       margin: auto;
     }
@@ -161,7 +168,6 @@
     }
     /* FOOTER */
     footer {
-      text-align: center;
       padding: 28px 20px;
       background: linear-gradient(135deg, #e9f4ff, #cfe0ff);
     }
@@ -184,92 +190,86 @@
 </head>
 <body>
 
-<section class="section-1 fade-in">
-  <div class="container hero">
-    <div>
-      <h1>Welcome to DynamonXRPL</h1>
-      <p>Dynamic NFTs & $DYNAMON token — evolve, battle, and join the universe on XRPL.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn">Buy $DYNAMON</a>
-        <a href="#" class="btn">Buy NFTs</a>
-      </div>
+<div class="container">
+
+<section class="hero section-1 fade-in">
+  <div>
+    <h1>Welcome to Dynamon XRPL</h1>
+    <p>Dynamic NFTs & $DYNAMON Token - evolve, battle, and join the universe on XRPL.</p>
+    <div class="hero-buttons">
+      <a href="https://firstledger.net/token/rBHzZvkV25S9TJoFm1n5jA25VRxB4yvfJy/44594E414D4F4E00000000000000000000000000" class="btn" target="_blank">Buy $DYNAMON</a>
+      <a href="https://xrp.cafe/collection/dynamon" class="btn" target="_blank">Buy NFTs</a>
     </div>
-    <div>
-      <img src="assets/1.png" alt="DynamonXRPL Hero Image" class="parallax">
-    </div>
+  </div>
+  <div>
+    <img src="assets/1.png" alt="DynamonXRPL Hero Image" class="parallax">
   </div>
 </section>
 
-<section class="section-2 fade-in gallery-section">
-  <div class="container">
-    <a href="#" class="btn">Training Ground</a>
-    <div class="gallery">
-      <img src="assets/5.png" alt="Dynamon NFT 1">
-      <img src="assets/6.png" alt="Dynamon NFT 2">
-      <img src="assets/3.png" alt="Dynamon NFT 3">
-      <img src="assets/4.png" alt="Dynamon NFT 4">
+<section class="gallery-section section-2 fade-in">
+  <a href="#" class="btn">Training Ground</a>
+  <div class="gallery">
+    <img src="assets/5.png" alt="Dynamon NFT 1">
+    <img src="assets/6.png" alt="Dynamon NFT 2">
+    <img src="assets/3.png" alt="Dynamon NFT 3">
+    <img src="assets/4.png" alt="Dynamon NFT 4">
+  </div>
+</section>
+
+<section class="section section-3 fade-in" id="about">
+  <h2>About DynamonXRPL</h2>
+  <p>DynamonXRPL is an NFT + token project on XRPL. Each NFT is dynamic, evolving over time, and $DYNAMON powers the ecosystem including PvP battles and marketplace activities.</p>
+</section>
+
+<section class="section section-4 fade-in" id="roadmap">
+  <h2>Roadmap – Trainer Journey</h2>
+  <div class="timeline">
+    <div class="node">
+      <strong>Phase 1 – Token Launch</strong>
+      <ul>
+        <li>$DYNAMON token launch</li>
+        <li>Community hubs live</li>
+        <li>Airdrops & liquidity</li>
+      </ul>
     </div>
-  </div>
-</section>
-
-<section class="section-3 fade-in" id="about">
-  <div class="container">
-    <h2>About DynamonXRPL</h2>
-    <p>DynamonXRPL is an NFT + token project on XRPL. Each NFT is dynamic, evolving over time, and $DYNAMON powers the ecosystem including PvP battles and marketplace activities.</p>
-  </div>
-</section>
-
-<section class="section-4 fade-in" id="roadmap">
-  <div class="container">
-    <h2>Roadmap – Trainer Journey</h2>
-    <div class="timeline">
-      <div class="node">
-        <strong>Phase 1 – Token Launch</strong>
-        <ul>
-          <li>$DYNAMON token launch</li>
-          <li>Community hubs live</li>
-          <li>Airdrops & liquidity</li>
-        </ul>
-      </div>
-      <div class="node">
-        <strong>Phase 2 – Dynamic NFTs</strong>
-        <ul>
-          <li>Launch dynamic NFT creatures</li>
-          <li>Base forms evolve over time</li>
-          <li>XRPL marketplace listings</li>
-        </ul>
-      </div>
-      <div class="node">
-        <strong>Phase 3 – PvP Arena</strong>
-        <ul>
-          <li>Trainer battles alpha</li>
-          <li>Dynamic NFT PvP battles</li>
-          <li>Leaderboards & $DYNAMON rewards</li>
-        </ul>
-      </div>
-      <div class="node">
-        <strong>Phase 4 – Full Game</strong>
-        <ul>
-          <li>Trainer Game release</li>
-          <li>Marketplace & competitive modes</li>
-          <li>New Dynamon generations</li>
-        </ul>
-      </div>
+    <div class="node">
+      <strong>Phase 2 – Dynamic NFTs</strong>
+      <ul>
+        <li>Launch dynamic NFT creatures</li>
+        <li>Base forms evolve over time</li>
+        <li>XRPL marketplace listings</li>
+      </ul>
+    </div>
+    <div class="node">
+      <strong>Phase 3 – PvP Arena</strong>
+      <ul>
+        <li>Trainer battles alpha</li>
+        <li>Dynamic NFT PvP battles</li>
+        <li>Leaderboards & $DYNAMON rewards</li>
+      </ul>
+    </div>
+    <div class="node">
+      <strong>Phase 4 – Full Game</strong>
+      <ul>
+        <li>Trainer Game release</li>
+        <li>Marketplace & competitive modes</li>
+        <li>New Dynamon generations</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <footer class="fade-in">
-  <div class="container">
-    <div class="links">
-      <a href="#">Buy $DYNAMON</a>
-      <a href="#">Buy NFTs</a>
-      <a href="#">Follow on X</a>
-      <a href="#">Join Telegram</a>
-    </div>
-    <p>© <span id="y"></span> DynamonXRPL. All rights reserved.</p>
+  <div class="links">
+    <a href="https://firstledger.net/token/rBHzZvkV25S9TJoFm1n5jA25VRxB4yvfJy/44594E414D4F4E00000000000000000000000000" target="_blank">Buy $DYNAMON</a>
+    <a href="https://xrp.cafe/collection/dynamon" target="_blank">Buy NFTs</a>
+    <a href="#">Follow on X</a>
+    <a href="#">Join Telegram</a>
   </div>
+  <p>© <span id="y"></span> DynamonXRPL. All rights reserved.</p>
 </footer>
+
+</div>
 
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
